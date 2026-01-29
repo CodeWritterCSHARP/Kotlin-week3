@@ -1,10 +1,12 @@
-3. MVVM erottaa UI:n (View) logiikasta (ViewModel) ja datasta (Model). ViewModel hallitsee tilaa ja liiketoimintalogiikkaa,
+3
+MVVM erottaa UI:n (View) logiikasta (ViewModel) ja datasta (Model). ViewModel hallitsee tilaa ja liiketoimintalogiikkaa,
 jolloin Compose UI pysyy yksinkertaisena ja reaktiivisena.
    
 StateFlow on Coroutine-pohjainen tilavirta, joka säilyttää viimeisimmän arvon ja emittoi muutokset.
 Compose voi kuunnella sitä collectAsState() avulla, jolloin UI päivittyy automaattisesti.
 
-2. Miten Compose-tilanhallinta toimii:
+2
+Miten Compose-tilanhallinta toimii:
 - Compose-tilanhallinta perustuu reaktiivisuuteen: UI päivittyy automaattisesti aina, kun siihen liittyvä tila muuttuu.
 - Tila voidaan säilyttää paikallisesti remember-funktiolla tai pidempään ViewModelin avulla.
 
@@ -12,8 +14,9 @@ Miksi ViewModel on parempi kuin pelkkä remember:
 - ViewModel säilyttää datan sovelluksen elinkaaren yli, esim. ruudun kierron yhteydessä.
   Se pitää logiikan erillään käyttöliittymästä, mikä tekee koodista selkeämpää ja helpommin ylläpidettävää.
   Composables voivat seurata ViewModelin tilaa reaktiivisesti, jolloin UI päivittyy automaattisesti muutosten yhteydessä.
-  
-1. Sovelluksessa käytetään Task-data classia, joka sisältää seuraavat kentät:
+
+1
+Sovelluksessa käytetään Task-data classia, joka sisältää seuraavat kentät:
 - id: yksilöllinen tunniste
 - 
 - title: tehtävän nimi
